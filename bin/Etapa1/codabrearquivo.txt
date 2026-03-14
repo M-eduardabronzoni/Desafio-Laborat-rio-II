@@ -1,0 +1,31 @@
+ /* 2ª  forma de resolução: mais didática mas menos eficiente em tempo de execução (usa um array "auxiliar"):
+		  * 1ª leitura: contar as linhas:
+		  * while ((leitor.readLine()) != null){
+		  * 	numLinhas++
+		  * }
+		  * leitor.close();
+		  * 
+		  * Criar array de strings com a quantidade de linhas:
+		  * String[] linhas = new String[numLinhas];
+		  * 
+		  * 2ª leitura: preencher o array de linhas
+		  * BufferedReader leitor2 = new BufferedReader(new FileReader(filename));
+		  * String linha = " ";
+		  * int i = 0;
+		  * while ((linha = leitor2.readLine()) != null){
+		  * 	linhas[i] = linha;
+		  * 	i++
+		  * }
+		  * leitor2.close();
+		  * 
+		  *Criar matriz char[][]
+		  *int numLinhas = linhas.length;
+		  *int numColunas = linhas[0].length(); - supõe que todas as linhas têm mesmo tamanho
+		  *labirinto = new char[numLinhas][numColunas];
+		  *Preencher matriz com os caracteres de cada linha
+		  *for (int i = 0; i < numLinhas; i++){
+		  *	for (int j = 0; j < numColunas; j++){
+		  *		labirinto[i][j] = linhas[i].charAt(j);
+		  * 
+		  */
+		//Inicializar o labirinto com o tamanho apropriado
